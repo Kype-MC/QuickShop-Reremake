@@ -50,9 +50,12 @@ public abstract class AbstractQSEvent extends Event {
 
     /**
      * Fire event on Bukkit event bus
+     *
+     * @return
      */
-    public void callEvent() {
+    public boolean callEvent() {
         QuickShop.getInstance().getServer().getPluginManager().callEvent(this);
+        return false;
     }
 
     /**

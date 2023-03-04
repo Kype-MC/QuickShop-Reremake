@@ -872,7 +872,7 @@ public class QuickShop extends JavaPlugin implements QuickShopAPI {
             }
         }
         // Check If we need kill the server or disable plugin
-
+/*
         switch (resultReport.getFinalResult()) {
             case DISABLE_PLUGIN:
                 Bukkit.getPluginManager().disablePlugin(this);
@@ -922,7 +922,7 @@ public class QuickShop extends JavaPlugin implements QuickShopAPI {
                 Runtime.getRuntime().halt(-1);
             default:
                 break;
-        }
+        }*/
         testing = false;
     }
 
@@ -945,6 +945,7 @@ public class QuickShop extends JavaPlugin implements QuickShopAPI {
             try {
                 onLoad();
             } catch (Throwable ignored) {
+                ignored.printStackTrace();
             }
         }
         Timer enableTimer = new Timer(true);

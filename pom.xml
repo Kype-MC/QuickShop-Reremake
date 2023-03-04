@@ -353,8 +353,8 @@
 
     <repositories>
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <id>papermc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
         <!--Disable for 503
         <repository>
@@ -403,10 +403,6 @@
         <repository>
             <id>sonatype-oss</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </repository>
-        <repository>
-            <id>papermc</id>
-            <url>https://papermc.io/repo/repository/maven-public/</url>
         </repository>
         <repository>
             <id>bg-repo</id>
@@ -625,9 +621,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.19.3-R0.1-SNAPSHOT</version>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.19.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

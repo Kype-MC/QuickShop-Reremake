@@ -114,6 +114,16 @@ public class Trader implements OfflinePlayer {
     }
 
     @Override
+    public long getLastLogin() {
+        return 0;
+    }
+
+    @Override
+    public long getLastSeen() {
+        return 0;
+    }
+
+    @Override
     public void incrementStatistic(@NotNull Statistic statistic) throws IllegalArgumentException {
         offlinePlayer.incrementStatistic(statistic);
     }

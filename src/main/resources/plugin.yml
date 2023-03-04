@@ -76,8 +76,9 @@ api-version: 1.15
 commands:
   qs:
     description: QuickShop command
-    usage: /qs
-    aliases: [ qsshop,qshop,quickshop ]
+    usage: /shop
+    aliases:
+      - shop
 
 permissions:
   quickshop.player:
