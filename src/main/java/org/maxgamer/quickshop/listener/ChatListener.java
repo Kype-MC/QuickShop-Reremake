@@ -19,6 +19,7 @@
 
 package org.maxgamer.quickshop.listener;
 
+import de.rexlnico.ranks.api.AsyncPlayerChatWithRankEvent;
 import io.papermc.paper.event.player.AsyncChatEvent;
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import org.bukkit.event.EventHandler;
@@ -39,19 +40,18 @@ public class ChatListener extends AbstractQSListener {
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
-    public void onChat(AsyncChatEvent e) {
-        if (e.isCancelled() && plugin.getConfig().getBoolean("shop.ignore-cancel-chat-event")) {
-            Util.debugLog("Ignored a chat event (Cancelled by another plugin, you can force process by turn on ignore-cancel-chat-event)");
+    public void onChat(AsyncPlayerChatWithRankEvent e) {
+        if (e.isCancelled()) {
             return;
         }
 
         if (!plugin.getShopManager().getActions().containsKey(e.getPlayer().getUniqueId())) {
             return;
         }
-        String msg = PlainTextComponentSerializer.plainText().serialize(e.message());
+        String msg = PlainTextComponentSerializer.plainText().serialize(e.getMessage());
         // Fix stupid chat plugin will add a weird space before or after the number we want.
-        plugin.getShopManager().handleChat(e.getPlayer(), msg.trim());
         e.setCancelled(true);
+        plugin.getShopManager().handleChat(e.getPlayer(), msg.trim());
     }
 
     /**

@@ -726,6 +726,13 @@
             <systemPath>${project.basedir}/lib/Residence5.0.1.0.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>de.rexlnico.ranks</groupId>
+            <artifactId>Ranks</artifactId>
+            <version>1.6.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/RankSystem-1.6.0.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>com.massivecraft</groupId>
             <artifactId>Factions</artifactId>
             <version>1.6.9.5-U0.6.0</version>

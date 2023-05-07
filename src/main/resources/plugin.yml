@@ -70,6 +70,8 @@ softdepend:
   - IridiumSkyblock
   - FabledSkyblock
   - NBTAPI
+depend:
+  - RankSystem
 
 api-version: 1.15
 
